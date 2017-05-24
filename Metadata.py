@@ -83,7 +83,7 @@ class LocationMetadata(ETLTools.ETLTools):
                                                         table='analytics_%s' % tbltype,
                                                         table_lookup_column_list=['id_%s_tm' % tbltype],
                                                         table_return_column_list=['id_%s' % tbltype],
-                                                        return_suffix='_tblid', indicator=False)
+                                                        right_suffix='_tblid', indicator=False)
         location_df = location_df.drop(['id_district_tm', 'id_region_tm', 'id_suburb_tm'], axis=1)
         location_df['last_updated'] = datetime.datetime.now()
         self.location_df = location_df.rename(columns={
@@ -109,12 +109,12 @@ class LocationMetadata(ETLTools.ETLTools):
         suburbs_list = self.con_website.table_lookup(df=suburbs_list, df_lookup_column_list=['id_suburb_tm'],
                                                      table='analytics_suburb',
                                                      table_lookup_column_list=['id_suburb_tm'],
-                                                     table_return_column_list=['id_suburb'], return_suffix='_tblid',
+                                                     table_return_column_list=['id_suburb'], right_suffix='_tblid',
                                                      indicator=False)
         suburbs_list = self.con_website.table_lookup(df=suburbs_list, df_lookup_column_list=['id_adjacent_suburb_tm'],
                                                      table='analytics_suburb',
                                                      table_lookup_column_list=['id_suburb_tm'],
-                                                     table_return_column_list=['id_suburb'], return_suffix='_adjtblid',
+                                                     table_return_column_list=['id_suburb'], right_suffix='_adjtblid',
                                                      indicator=False)
         suburbs_list = suburbs_list.drop(['id_adjacent_suburb_tm', 'id_suburb_tm', 'id_suburb_tm_adjtblid'], axis=1)
         suburbs_list['last_updated'] = datetime.datetime.now()
@@ -174,7 +174,7 @@ def run_metadata():
         location_api = json.load(file)
         location_api = location_api['location_api']
 
-    with open('website_connection.json') as file:
+    with open('connections.json') as file:
         web_con = json.load(file)
 
     location_md = LocationMetadata(location_api=location_api,

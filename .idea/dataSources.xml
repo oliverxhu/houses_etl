@@ -10,5 +10,11 @@
         <property name="currentSchema" value="staging" />
       </driver-properties>
     </data-source>
+    <data-source source="LOCAL" name="website" uuid="aedc7136-4506-41be-a6b2-e4f9911f5b36">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://housing-postgres.ct0tluqftf3s.ap-southeast-2.rds.amazonaws.com:5432/housingwebsite</jdbc-url>
+    </data-source>
   </component>
 </project>
