@@ -1,12 +1,12 @@
 {
-  "ws_user": "housingdata",
-  "ws_passwd": "housingdata123",
-  "ws_host": "housing-postgres.ct0tluqftf3s.ap-southeast-2.rds.amazonaws.com",
-  "ws_db": "housingwebsite",
-  "ws_schema": "housing",
+  "dt_user": "housingdata",
+  "dt_passwd": "housingdata123",
+  "dt_host": "housing.ct0tluqftf3s.ap-southeast-2.rds.amazonaws.com",
+  "dt_db": "housing",
+  "dt_schema": "housing",
   "st_user": "housingdata",
   "st_passwd": "housingdata123",
-  "st_host": "housing-postgres.ct0tluqftf3s.ap-southeast-2.rds.amazonaws.com",
+  "st_host": "housing.ct0tluqftf3s.ap-southeast-2.rds.amazonaws.com",
   "st_db": "housing",
   "st_schema": "staging"
 }

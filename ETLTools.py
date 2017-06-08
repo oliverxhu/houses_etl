@@ -50,10 +50,16 @@ class ETLTools:
         return pd.DataFrame([[val for val in row] for row in generator], columns=columns)
 
     def datenow(self):
-        return datetime.datetime.now()
+        now = datetime.datetime.now()
+        return datetime.datetime(now.year, now.month, now.day, now.hour, 0)
 
     def dateend(self):
-        return datetime.date(year=2099, month=12, day=31)
+        return datetime.date(2099, 12, 31)
+
+    def from_ms_timestamp(self, ts):
+        if len(str(ts)) < 2:
+            return None
+        return datetime.datetime.fromtimestamp(ts/1000)
 
 class DatabaseConnection:
 
@@ -80,6 +86,9 @@ class DatabaseConnection:
         """Define a postgres psycopg2 connection to facilitate pygrametl processes"""
         return psycopg2.connect("""host='%s' dbname='%s' user='%s' password='%s'""" %
                                 (self._host, self._db, self._user, self._passwd))
+
+    def create_trans_instance(self):
+        return Transaction(self, self._engine)
 
     def _connection_test(self):
         try:
@@ -110,9 +119,6 @@ class DatabaseConnection:
         """
         self._connection_test()
         df.to_sql(table, con=self.con, schema=self._schema, if_exists='append', index=False, dtype=dtype_dict)
-
-    def update_table(self, sql):
-        self.con.execute(sql)
 
     def update_scd_type_one(self, df, dimension_table, key, attributeslist, lookupatts, type1atts):
         """
@@ -146,7 +152,7 @@ class DatabaseConnection:
         pgetlconn.close()
 
     def table_lookup(self, df, df_lookup_column_list, table, table_lookup_column_list, table_return_column_list=[],
-                     right_suffix='_lookup', indicator=True, how='left'):
+                     right_suffix='_lookup', indicator=True, how='left', wheresql=None):
         """
         Looks up values from a database table
         :param df: pandas DataFrame input table
@@ -161,8 +167,13 @@ class DatabaseConnection:
         :return: original input pandas DataFrame with lookup columns and return columns appended
         """
         self._connection_test()
-        df_lookup = pd.read_sql("SELECT %s FROM %s" % (
+        if wheresql:
+            sql = "SELECT %s FROM %s " + wheresql
+        else:
+            sql = "SELECT %s FROM %s"
+        df_lookup = pd.read_sql(sql % (
             ', '.join(table_lookup_column_list+table_return_column_list), table), con=self.con)
+
         return pd.merge(left=df, right=df_lookup, how=how, left_on=df_lookup_column_list,
                         right_on=table_lookup_column_list, suffixes=('', right_suffix), indicator=indicator)
 
@@ -193,6 +204,7 @@ class DatabaseConnection:
         :param df_lookup_column_list: pandas DataFrame columns to look up
         :param table: table to write records to
         :param table_lookup_column_list: database table columns that corresponds to df_lookup_column_list
+        :param table_pk: primary key of table
         :return: None
         """
         self._connection_test()
@@ -206,3 +218,10 @@ class DatabaseConnection:
         old_records = old_records.drop('record_exists', axis=1)[[table_pk]]
         return old_records
 
+class Transaction:
+
+    def __init__(self, database_connection, engine):
+        self.db = database_connection
+        self._transact_engine = engine
+        self.con = self._transact_engine.connect()
+        self.trans = self.con.begin()

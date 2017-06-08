@@ -54,21 +54,21 @@ class LocationMetadata(ETLTools.ETLTools):
     def run_region(self):
         """Populates self.region_df for `region`. Runs in the constructor."""
         region_df = self.location()[['id_region_tm', 'region_name']]
-        region_df['last_updated'] = datetime.datetime.now()
+        region_df['row_insert_date'] = datetime.datetime.now()
         region_df = region_df.rename(columns={'region_name': 'name'})
         return region_df.drop_duplicates(subset=['id_region_tm', 'name'])
 
     def run_district(self):
         """Populates self.district_df for `district`. Runs in the constructor."""
         district_df = self.location()[['id_district_tm', 'district_name']]
-        district_df['last_updated'] = datetime.datetime.now()
+        district_df['row_insert_date'] = datetime.datetime.now()
         district_df = district_df.rename(columns={'district_name': 'name'})
         return district_df.drop_duplicates(subset=['id_district_tm', 'name'])
 
     def run_suburb(self):
         """Populates self.suburb_df for `suburb`. Runs in the constructor."""
         suburb_df = self.location()[['id_suburb_tm', 'suburb_name']]
-        suburb_df['last_updated'] = datetime.datetime.now()
+        suburb_df['row_insert_date'] = datetime.datetime.now()
         suburb_df = suburb_df.rename(columns={'suburb_name': 'name'})
         return suburb_df.drop_duplicates(subset=['id_suburb_tm', 'name'])
 
@@ -80,12 +80,12 @@ class LocationMetadata(ETLTools.ETLTools):
         location_df = self.location()[['id_district_tm', 'id_region_tm', 'id_suburb_tm']]
         for tbltype in ('region', 'district', 'suburb'):
             location_df = self.con_website.table_lookup(df=location_df, df_lookup_column_list=['id_%s_tm' % tbltype],
-                                                        table='analytics_%s' % tbltype,
+                                                        table=tbltype,
                                                         table_lookup_column_list=['id_%s_tm' % tbltype],
                                                         table_return_column_list=['id_%s' % tbltype],
                                                         right_suffix='_tblid', indicator=False)
         location_df = location_df.drop(['id_district_tm', 'id_region_tm', 'id_suburb_tm'], axis=1)
-        location_df['last_updated'] = datetime.datetime.now()
+        location_df['row_insert_date'] = datetime.datetime.now()
         self.location_df = location_df.rename(columns={
             'id_region_tblid': 'id_region',
             'id_district_tblid': 'id_district',
@@ -107,17 +107,17 @@ class LocationMetadata(ETLTools.ETLTools):
         suburbs_list = suburbs_list.drop('check', axis=1)
         suburbs_list.columns = ['id_adjacent_suburb_tm', 'id_suburb_tm']
         suburbs_list = self.con_website.table_lookup(df=suburbs_list, df_lookup_column_list=['id_suburb_tm'],
-                                                     table='analytics_suburb',
+                                                     table='suburb',
                                                      table_lookup_column_list=['id_suburb_tm'],
                                                      table_return_column_list=['id_suburb'], right_suffix='_tblid',
                                                      indicator=False)
         suburbs_list = self.con_website.table_lookup(df=suburbs_list, df_lookup_column_list=['id_adjacent_suburb_tm'],
-                                                     table='analytics_suburb',
+                                                     table='suburb',
                                                      table_lookup_column_list=['id_suburb_tm'],
                                                      table_return_column_list=['id_suburb'], right_suffix='_adjtblid',
                                                      indicator=False)
         suburbs_list = suburbs_list.drop(['id_adjacent_suburb_tm', 'id_suburb_tm', 'id_suburb_tm_adjtblid'], axis=1)
-        suburbs_list['last_updated'] = datetime.datetime.now()
+        suburbs_list['row_insert_date'] = datetime.datetime.now()
         suburbs_list = suburbs_list.dropna(axis=0)
         self.adjacent_suburbs_df = suburbs_list.rename(columns={
             'id_suburb_tblid': 'id_suburb',
@@ -126,36 +126,36 @@ class LocationMetadata(ETLTools.ETLTools):
 
     def update_region_table(self):
         """Update region metadata table"""
-        self.con_website.update_scd_type_one(self.region_df, dimension_table='analytics_region', key='id_region',
-                                             attributeslist=['id_region_tm', 'name', 'last_updated'],
-                                             lookupatts=['id_region_tm'], type1atts=['name', 'last_updated'])
+        self.con_website.update_scd_type_one(self.region_df, dimension_table='region', key='id_region',
+                                             attributeslist=['id_region_tm', 'name', 'row_insert_date'],
+                                             lookupatts=['id_region_tm'], type1atts=['name', 'row_insert_date'])
         self._region_updated = True
 
     def update_district_table(self):
         """Update district metadata table"""
-        self.con_website.update_scd_type_one(self.district_df, dimension_table='analytics_district', key='id_district',
-                                             attributeslist=['id_district_tm', 'name', 'last_updated'],
-                                             lookupatts=['id_district_tm'], type1atts=['name', 'last_updated'])
+        self.con_website.update_scd_type_one(self.district_df, dimension_table='district', key='id_district',
+                                             attributeslist=['id_district_tm', 'name', 'row_insert_date'],
+                                             lookupatts=['id_district_tm'], type1atts=['name', 'row_insert_date'])
         self._district_updated = True
 
     def update_suburb_table(self):
         """Update suburb metadata table"""
-        self.con_website.update_scd_type_one(self.suburb_df, dimension_table='analytics_suburb', key='id_suburb',
-                                             attributeslist=['id_suburb_tm', 'name', 'last_updated'],
-                                             lookupatts=['id_suburb_tm'], type1atts=['name', 'last_updated'])
+        self.con_website.update_scd_type_one(self.suburb_df, dimension_table='suburb', key='id_suburb',
+                                             attributeslist=['id_suburb_tm', 'name', 'row_insert_date'],
+                                             lookupatts=['id_suburb_tm'], type1atts=['name', 'row_insert_date'])
         self._suburb_updated = True
 
     def write_location_table(self):
         """Only for first time writing, or after truncating"""
         self.run_location()
-        self.con_website.append_df_to_table(df=self.location_df, table='analytics_location')
+        self.con_website.append_df_to_table(df=self.location_df, table='location')
 
     def update_location_table(self):
         """Update location metadata table. This requires all 3 location tables to be updated"""
         self.run_location()
         self.con_website.add_new_records(df=self.location_df,
                                          df_lookup_column_list=['id_region', 'id_district', 'id_suburb'],
-                                         table='analytics_location',
+                                         table='location',
                                          table_lookup_column_list=['id_region', 'id_district', 'id_suburb'])
         self._location_updated = True
 
@@ -164,7 +164,7 @@ class LocationMetadata(ETLTools.ETLTools):
         self.run_adjacent_suburbs()
         self.con_website.add_new_records(df=self.adjacent_suburbs_df,
                                          df_lookup_column_list=['id_suburb', 'id_suburb_adjacent'],
-                                         table='analytics_adjacent_suburbs',
+                                         table='adjacent_suburbs',
                                          table_lookup_column_list=['id_suburb', 'id_suburb_adjacent'])
         self._adjacent_suburbs_updated = True
 
@@ -185,3 +185,5 @@ def run_metadata():
     location_md.update_suburb_table()
     location_md.update_location_table()
     location_md.update_adjacent_suburbs_table()
+
+run_metadata()

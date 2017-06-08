@@ -1,20 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="staging" uuid="79c5cae2-0e16-4ed4-af5b-d59529fe3ab9">
+    <data-source source="LOCAL" name="housing" uuid="17ef1cb4-bb20-406d-b870-afd16e480d44">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://housing-postgres.ct0tluqftf3s.ap-southeast-2.rds.amazonaws.com:5432/housing</jdbc-url>
-      <driver-properties>
-        <property name="currentSchema" value="staging" />
-      </driver-properties>
+      <jdbc-url>jdbc:postgresql://housing.ct0tluqftf3s.ap-southeast-2.rds.amazonaws.com:5432/housing</jdbc-url>
     </data-source>
-    <data-source source="LOCAL" name="website" uuid="aedc7136-4506-41be-a6b2-e4f9911f5b36">
+    <data-source source="LOCAL" name="staging" uuid="afd6a63a-07d2-4347-b530-a6112ed2fa8d">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://housing-postgres.ct0tluqftf3s.ap-southeast-2.rds.amazonaws.com:5432/housingwebsite</jdbc-url>
+      <jdbc-url>jdbc:postgresql://housing.ct0tluqftf3s.ap-southeast-2.rds.amazonaws.com:5432/staging</jdbc-url>
     </data-source>
   </component>
 </project>

@@ -2,20 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a94081b3-fad2-4575-a638-e6d8234704e9" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/website_connection.json" afterPath="$PROJECT_DIR$/connections.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/79c5cae2-0e16-4ed4-af5b-d59529fe3ab9/_metadata_/metadata" afterPath="$PROJECT_DIR$/.idea/dataSources/79c5cae2-0e16-4ed4-af5b-d59529fe3ab9/_metadata_/metadata" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/79c5cae2-0e16-4ed4-af5b-d59529fe3ab9/_metadata_/metadata.values.at" afterPath="$PROJECT_DIR$/.idea/dataSources/79c5cae2-0e16-4ed4-af5b-d59529fe3ab9/_metadata_/metadata.values.at" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/79c5cae2-0e16-4ed4-af5b-d59529fe3ab9/_src_/database/housing/schema/staging.zip" afterPath="$PROJECT_DIR$/.idea/dataSources/79c5cae2-0e16-4ed4-af5b-d59529fe3ab9/_src_/database/housing/schema/staging.zip" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/dataSources/79c5cae2-0e16-4ed4-af5b-d59529fe3ab9.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/dataSources/aedc7136-4506-41be-a6b2-e4f9911f5b36.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/aedc7136-4506-41be-a6b2-e4f9911f5b36/_metadata_/metadata" afterPath="$PROJECT_DIR$/.idea/dataSources/aedc7136-4506-41be-a6b2-e4f9911f5b36/_metadata_/metadata" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/aedc7136-4506-41be-a6b2-e4f9911f5b36/_metadata_/metadata.keystream" afterPath="$PROJECT_DIR$/.idea/dataSources/aedc7136-4506-41be-a6b2-e4f9911f5b36/_metadata_/metadata.keystream" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/aedc7136-4506-41be-a6b2-e4f9911f5b36/_metadata_/metadata.keystream.len" afterPath="$PROJECT_DIR$/.idea/dataSources/aedc7136-4506-41be-a6b2-e4f9911f5b36/_metadata_/metadata.keystream.len" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/aedc7136-4506-41be-a6b2-e4f9911f5b36/_metadata_/metadata.len" afterPath="$PROJECT_DIR$/.idea/dataSources/aedc7136-4506-41be-a6b2-e4f9911f5b36/_metadata_/metadata.len" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/aedc7136-4506-41be-a6b2-e4f9911f5b36/_metadata_/metadata.values.at" afterPath="$PROJECT_DIR$/.idea/dataSources/aedc7136-4506-41be-a6b2-e4f9911f5b36/_metadata_/metadata.values.at" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/aedc7136-4506-41be-a6b2-e4f9911f5b36/_metadata_/metadata_i" afterPath="$PROJECT_DIR$/.idea/dataSources/aedc7136-4506-41be-a6b2-e4f9911f5b36/_metadata_/metadata_i" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/79c5cae2-0e16-4ed4-af5b-d59529fe3ab9.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/79c5cae2-0e16-4ed4-af5b-d59529fe3ab9.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.ipynb_checkpoints/Flatten-checkpoint.ipynb" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/Flatten-checkpoint.ipynb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ETLTools.py" afterPath="$PROJECT_DIR$/ETLTools.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Flatten.ipynb" afterPath="$PROJECT_DIR$/Flatten.ipynb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Listings.py" afterPath="$PROJECT_DIR$/Listings.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Metadata.py" afterPath="$PROJECT_DIR$/Metadata.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/connections.json" afterPath="$PROJECT_DIR$/connections.json" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -25,8 +29,8 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Housing_ETL$Metadata.coverage" NAME="Metadata Coverage Results" MODIFIED="1495193367152" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Housing_ETL$Listings.coverage" NAME="Listings Coverage Results" MODIFIED="1495580377316" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Housing_ETL$Metadata.coverage" NAME="Metadata Coverage Results" MODIFIED="1496575985784" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Housing_ETL$Listings.coverage" NAME="Listings Coverage Results" MODIFIED="1496799391033" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Housing_ETL$Locations_Metadata.coverage" NAME="Locations_Metadata Coverage Results" MODIFIED="1495191119639" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Housing_ETL$ETLTools.coverage" NAME="ETLTools Coverage Results" MODIFIED="1495373634013" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
@@ -38,87 +42,28 @@
     <option name="SHOW_TABLE_DETAILS" value="true" />
     <option name="SHOW_EMPTY_GROUPS" value="false" />
     <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <PATH>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="website" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-    </PATH>
-    <PATH>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="website" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="housingwebsite" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-    </PATH>
-    <PATH>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="website" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="housingwebsite" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="housing" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-    </PATH>
-    <PATH>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="staging" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-    </PATH>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="Metadata.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Metadata.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="111" column="105" lean-forward="false" selection-start-line="111" selection-start-column="93" selection-end-line="111" selection-end-column="105" />
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Listings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Listings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="398">
-              <caret line="142" column="0" lean-forward="true" selection-start-line="142" selection-start-column="0" selection-end-line="142" selection-end-column="0" />
+            <state relative-caret-position="614">
+              <caret line="151" column="98" lean-forward="false" selection-start-line="151" selection-start-column="98" selection-end-line="151" selection-end-column="98" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
-                <marker date="1495630787396" expanded="true" signature="1855:1932" ph="SELECT sourc... control" />
-                <marker date="1495630787396" expanded="true" signature="4482:7772" ph="SELECT sourc... control" />
-                <marker date="1495630787396" expanded="true" signature="4611:4626" ph="SELECT missi... agen" />
-                <marker date="1495630787396" expanded="true" signature="4611:4659" ph="SELECT missi... tm_rental_listings_hourly" />
-                <marker date="1495630787396" expanded="true" signature="5620:5660" ph="SELECT &quot;List... tm_rental_listings_hourly" />
-                <marker date="1495630787396" expanded="true" signature="7536:7622" ph="UPDATE renta... " />
+                <marker date="1496884699922" expanded="true" signature="1863:1948" ph="SELECT sourc... control" />
+                <marker date="1496884699922" expanded="true" signature="1863:1952" ph="SELECT sourc... control" />
+                <marker date="1496884699922" expanded="true" signature="5211:5226" ph="SELECT missi... tm_rental_listings_hourly" />
+                <marker date="1496884699922" expanded="true" signature="5211:5251" ph="SELECT missi... agency" />
+                <marker date="1496884699922" expanded="true" signature="6578:6618" ph="SELECT missi... tm_rental_listings_hourly" />
+                <marker date="1496884699922" expanded="true" signature="7354:7390" ph="select count... rental_listings" />
+                <marker date="1496884699922" expanded="true" signature="7999:8084" ph="UPDATE renta... " />
+                <marker date="1496884699922" expanded="true" signature="8236:8272" ph="select count... rental_listings" />
+                <marker date="1496884699922" expanded="true" signature="9416:9625" ph="UPDATE renta... " />
+                <marker date="1496884699922" expanded="true" signature="10831:10871" ph="SELECT missi... tm_rental_listings_hourly" />
+                <marker date="1496884699922" expanded="true" signature="12176:12216" ph="SELECT missi... tm_rental_listings_hourly" />
               </folding>
             </state>
           </provider>
@@ -127,34 +72,47 @@
       <file leaf-file-name="ETLTools.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ETLTools.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1567">
-              <caret line="100" column="38" lean-forward="false" selection-start-line="100" selection-start-column="38" selection-end-line="100" selection-end-column="38" />
+            <state relative-caret-position="136">
+              <caret line="155" column="11" lean-forward="true" selection-start-line="155" selection-start-column="11" selection-end-line="155" selection-end-column="11" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
-                <marker date="1495630457839" expanded="true" signature="3031:3068" ph="SELECT sourc... control" />
-                <marker date="1495630457839" expanded="true" signature="6118:6133" ph="SELECT missi... missing_value" />
-                <marker date="1495630457839" expanded="true" signature="6118:6135" ph="SELECT %s FR... " />
+                <marker date="1496797868012" expanded="true" signature="6368:6383" ph="SELECT %s FR... " />
+                <marker date="1496797868012" expanded="true" signature="6368:6385" ph="SELECT %s FR... " />
+                <marker date="1496797868012" expanded="true" signature="6368:6386" ph="SELECT %s FR... " />
+                <marker date="1496797868012" expanded="true" signature="6432:6449" ph="SELECT %s FR... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="console.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/aedc7136-4506-41be-a6b2-e4f9911f5b36/console.sql">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/17ef1cb4-bb20-406d-b870-afd16e480d44/console.sql">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="37" lean-forward="false" selection-start-line="0" selection-start-column="37" selection-end-line="0" selection-end-column="37" />
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="console.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/79c5cae2-0e16-4ed4-af5b-d59529fe3ab9/console.sql">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/afd6a63a-07d2-4347-b530-a6112ed2fa8d/console.sql">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="109" />
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Metadata.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Metadata.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1479">
+              <caret line="92" column="10" lean-forward="false" selection-start-line="92" selection-start-column="10" selection-end-line="92" selection-end-column="10" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -173,7 +131,17 @@
       <find>tbl</find>
       <find>right_suffix</find>
       <find>right_suf</find>
+      <find>control_destination_columns</find>
+      <find>analytics</find>
+      <find>last_updated</find>
+      <find>control_source_destination_mapping</find>
+      <find>data_sour</find>
+      <find>dropna</find>
+      <find>print</find>
     </findStrings>
+    <replaceStrings>
+      <replace>row_insert_date</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -186,11 +154,12 @@
         <option value="$PROJECT_DIR$/Metadata/Locations_Metadata.py" />
         <option value="$PROJECT_DIR$/Locations_Metadata.py" />
         <option value="$PROJECT_DIR$/website_connection.json" />
-        <option value="$PROJECT_DIR$/connections.json" />
-        <option value="$PROJECT_DIR$/Metadata.py" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/aedc7136-4506-41be-a6b2-e4f9911f5b36/console.sql" />
-        <option value="$PROJECT_DIR$/ETLTools.py" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/79c5cae2-0e16-4ed4-af5b-d59529fe3ab9/console.sql" />
+        <option value="$PROJECT_DIR$/Metadata.py" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/17ef1cb4-bb20-406d-b870-afd16e480d44/console.sql" />
+        <option value="$PROJECT_DIR$/connections.json" />
+        <option value="$PROJECT_DIR$/ETLTools.py" />
         <option value="$PROJECT_DIR$/Listings.py" />
       </list>
     </option>
@@ -202,10 +171,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-11" />
-    <option name="y" value="-11" />
-    <option name="width" value="1942" />
-    <option name="height" value="1042" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -242,18 +211,18 @@
   </component>
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path" value="C:/Program Files (x86)/nodejs/node" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../React/houses" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../housingdatabase" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="database.main" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="PostgreSQL" />
     <property name="database.data.extractors.current" value="Tab-separated (TSV)" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\HF_BI\.PyCharm2017.1\config\consoles\db\79c5cae2-0e16-4ed4-af5b-d59529fe3ab9" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\HF_BI\Documents\Housing\Housing ETL" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\HF_BI\.PyCharm2017.1\config\consoles\db\79c5cae2-0e16-4ed4-af5b-d59529fe3ab9" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -502,8 +471,8 @@
     <recent_temporary>
       <list size="4">
         <item index="0" class="java.lang.String" itemvalue="Python.Listings" />
-        <item index="1" class="java.lang.String" itemvalue="Python.ETLTools" />
-        <item index="2" class="java.lang.String" itemvalue="Python.Metadata" />
+        <item index="1" class="java.lang.String" itemvalue="Python.Metadata" />
+        <item index="2" class="java.lang.String" itemvalue="Python.ETLTools" />
         <item index="3" class="java.lang.String" itemvalue="Python.Locations_Metadata" />
       </list>
     </recent_temporary>
@@ -522,31 +491,39 @@
       <option name="presentableId" value="Default" />
       <updated>1494984376950</updated>
     </task>
+    <task id="LOCAL-00001" summary="Listing addition and deletions.&#10;Agency metadata table.&#10;Working with staging.control table">
+      <created>1495630897949</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1495630897949</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29832935" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15677084" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21302083" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293556" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41146588" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16229117" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2743106" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850778" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -556,37 +533,19 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Listing addition and deletions.&#10;Agency metadata table.&#10;Working with staging.control table" />
+    <option name="LAST_COMMIT_MESSAGE" value="Listing addition and deletions.&#10;Agency metadata table.&#10;Working with staging.control table" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ETLTools.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2397">
-          <caret line="146" column="70" lean-forward="false" selection-start-line="146" selection-start-column="70" selection-end-line="146" selection-end-column="70" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-            <marker date="1495630457839" expanded="true" signature="3031:3068" ph="SELECT sourc... control" />
-            <marker date="1495630457839" expanded="true" signature="6118:6133" ph="SELECT missi... missing_value" />
-            <marker date="1495630457839" expanded="true" signature="6118:6135" ph="SELECT %s FR... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/API.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="1" lean-forward="false" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/79c5cae2-0e16-4ed4-af5b-d59529fe3ab9/console.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="41" lean-forward="true" selection-start-line="1" selection-start-column="41" selection-end-line="1" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -604,7 +563,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="47" lean-forward="false" selection-start-line="1" selection-start-column="47" selection-end-line="1" selection-end-column="47" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -614,9 +572,10 @@
           <caret line="146" column="70" lean-forward="false" selection-start-line="146" selection-start-column="70" selection-end-line="146" selection-end-column="70" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
-            <marker date="1495630457839" expanded="true" signature="3031:3068" ph="SELECT sourc... control" />
-            <marker date="1495630457839" expanded="true" signature="6118:6133" ph="SELECT missi... missing_value" />
-            <marker date="1495630457839" expanded="true" signature="6118:6135" ph="SELECT %s FR... " />
+            <marker date="1496797868012" expanded="true" signature="6368:6383" ph="SELECT %s FR... " />
+            <marker date="1496797868012" expanded="true" signature="6368:6385" ph="SELECT %s FR... " />
+            <marker date="1496797868012" expanded="true" signature="6368:6386" ph="SELECT %s FR... " />
+            <marker date="1496797868012" expanded="true" signature="6432:6449" ph="SELECT %s FR... " />
           </folding>
         </state>
       </provider>
@@ -625,7 +584,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="1" lean-forward="false" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -635,12 +593,17 @@
           <caret line="38" column="79" lean-forward="false" selection-start-line="38" selection-start-column="79" selection-end-line="38" selection-end-column="79" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
-            <marker date="1495630787396" expanded="true" signature="1855:1932" ph="SELECT sourc... control" />
-            <marker date="1495630787396" expanded="true" signature="4482:7772" ph="SELECT sourc... control" />
-            <marker date="1495630787396" expanded="true" signature="4611:4626" ph="SELECT missi... agen" />
-            <marker date="1495630787396" expanded="true" signature="4611:4659" ph="SELECT missi... tm_rental_listings_hourly" />
-            <marker date="1495630787396" expanded="true" signature="5620:5660" ph="SELECT &quot;List... tm_rental_listings_hourly" />
-            <marker date="1495630787396" expanded="true" signature="7536:7622" ph="UPDATE renta... " />
+            <marker date="1496884699922" expanded="true" signature="1863:1948" ph="SELECT sourc... control" />
+            <marker date="1496884699922" expanded="true" signature="1863:1952" ph="SELECT sourc... control" />
+            <marker date="1496884699922" expanded="true" signature="5211:5226" ph="SELECT missi... tm_rental_listings_hourly" />
+            <marker date="1496884699922" expanded="true" signature="5211:5251" ph="SELECT missi... agency" />
+            <marker date="1496884699922" expanded="true" signature="6578:6618" ph="SELECT missi... tm_rental_listings_hourly" />
+            <marker date="1496884699922" expanded="true" signature="7354:7390" ph="select count... rental_listings" />
+            <marker date="1496884699922" expanded="true" signature="7999:8084" ph="UPDATE renta... " />
+            <marker date="1496884699922" expanded="true" signature="8236:8272" ph="select count... rental_listings" />
+            <marker date="1496884699922" expanded="true" signature="9416:9625" ph="UPDATE renta... " />
+            <marker date="1496884699922" expanded="true" signature="10831:10871" ph="SELECT missi... tm_rental_listings_hourly" />
+            <marker date="1496884699922" expanded="true" signature="12176:12216" ph="SELECT missi... tm_rental_listings_hourly" />
           </folding>
         </state>
       </provider>
@@ -661,12 +624,17 @@
           <caret line="38" column="42" lean-forward="false" selection-start-line="38" selection-start-column="42" selection-end-line="38" selection-end-column="42" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
-            <marker date="1495630787396" expanded="true" signature="1855:1932" ph="SELECT sourc... control" />
-            <marker date="1495630787396" expanded="true" signature="4482:7772" ph="SELECT sourc... control" />
-            <marker date="1495630787396" expanded="true" signature="4611:4626" ph="SELECT missi... agen" />
-            <marker date="1495630787396" expanded="true" signature="4611:4659" ph="SELECT missi... tm_rental_listings_hourly" />
-            <marker date="1495630787396" expanded="true" signature="5620:5660" ph="SELECT &quot;List... tm_rental_listings_hourly" />
-            <marker date="1495630787396" expanded="true" signature="7536:7622" ph="UPDATE renta... " />
+            <marker date="1496884699922" expanded="true" signature="1863:1948" ph="SELECT sourc... control" />
+            <marker date="1496884699922" expanded="true" signature="1863:1952" ph="SELECT sourc... control" />
+            <marker date="1496884699922" expanded="true" signature="5211:5226" ph="SELECT missi... tm_rental_listings_hourly" />
+            <marker date="1496884699922" expanded="true" signature="5211:5251" ph="SELECT missi... agency" />
+            <marker date="1496884699922" expanded="true" signature="6578:6618" ph="SELECT missi... tm_rental_listings_hourly" />
+            <marker date="1496884699922" expanded="true" signature="7354:7390" ph="select count... rental_listings" />
+            <marker date="1496884699922" expanded="true" signature="7999:8084" ph="UPDATE renta... " />
+            <marker date="1496884699922" expanded="true" signature="8236:8272" ph="select count... rental_listings" />
+            <marker date="1496884699922" expanded="true" signature="9416:9625" ph="UPDATE renta... " />
+            <marker date="1496884699922" expanded="true" signature="10831:10871" ph="SELECT missi... tm_rental_listings_hourly" />
+            <marker date="1496884699922" expanded="true" signature="12176:12216" ph="SELECT missi... tm_rental_listings_hourly" />
           </folding>
         </state>
       </provider>
@@ -677,9 +645,10 @@
           <caret line="87" column="36" lean-forward="false" selection-start-line="87" selection-start-column="36" selection-end-line="87" selection-end-column="36" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
-            <marker date="1495630457839" expanded="true" signature="3031:3068" ph="SELECT sourc... control" />
-            <marker date="1495630457839" expanded="true" signature="6118:6133" ph="SELECT missi... missing_value" />
-            <marker date="1495630457839" expanded="true" signature="6118:6135" ph="SELECT %s FR... " />
+            <marker date="1496797868012" expanded="true" signature="6368:6383" ph="SELECT %s FR... " />
+            <marker date="1496797868012" expanded="true" signature="6368:6385" ph="SELECT %s FR... " />
+            <marker date="1496797868012" expanded="true" signature="6368:6386" ph="SELECT %s FR... " />
+            <marker date="1496797868012" expanded="true" signature="6432:6449" ph="SELECT %s FR... " />
           </folding>
         </state>
       </provider>
@@ -688,7 +657,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="1" lean-forward="false" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -696,7 +664,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="47" lean-forward="false" selection-start-line="1" selection-start-column="47" selection-end-line="1" selection-end-column="47" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -716,12 +683,17 @@
           <caret line="38" column="42" lean-forward="false" selection-start-line="38" selection-start-column="42" selection-end-line="38" selection-end-column="42" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
-            <marker date="1495630787396" expanded="true" signature="1855:1932" ph="SELECT sourc... control" />
-            <marker date="1495630787396" expanded="true" signature="4482:7772" ph="SELECT sourc... control" />
-            <marker date="1495630787396" expanded="true" signature="4611:4626" ph="SELECT missi... agen" />
-            <marker date="1495630787396" expanded="true" signature="4611:4659" ph="SELECT missi... tm_rental_listings_hourly" />
-            <marker date="1495630787396" expanded="true" signature="5620:5660" ph="SELECT &quot;List... tm_rental_listings_hourly" />
-            <marker date="1495630787396" expanded="true" signature="7536:7622" ph="UPDATE renta... " />
+            <marker date="1496884699922" expanded="true" signature="1863:1948" ph="SELECT sourc... control" />
+            <marker date="1496884699922" expanded="true" signature="1863:1952" ph="SELECT sourc... control" />
+            <marker date="1496884699922" expanded="true" signature="5211:5226" ph="SELECT missi... tm_rental_listings_hourly" />
+            <marker date="1496884699922" expanded="true" signature="5211:5251" ph="SELECT missi... agency" />
+            <marker date="1496884699922" expanded="true" signature="6578:6618" ph="SELECT missi... tm_rental_listings_hourly" />
+            <marker date="1496884699922" expanded="true" signature="7354:7390" ph="select count... rental_listings" />
+            <marker date="1496884699922" expanded="true" signature="7999:8084" ph="UPDATE renta... " />
+            <marker date="1496884699922" expanded="true" signature="8236:8272" ph="select count... rental_listings" />
+            <marker date="1496884699922" expanded="true" signature="9416:9625" ph="UPDATE renta... " />
+            <marker date="1496884699922" expanded="true" signature="10831:10871" ph="SELECT missi... tm_rental_listings_hourly" />
+            <marker date="1496884699922" expanded="true" signature="12176:12216" ph="SELECT missi... tm_rental_listings_hourly" />
           </folding>
         </state>
       </provider>
@@ -732,9 +704,10 @@
           <caret line="87" column="36" lean-forward="false" selection-start-line="87" selection-start-column="36" selection-end-line="87" selection-end-column="36" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
-            <marker date="1495630457839" expanded="true" signature="3031:3068" ph="SELECT sourc... control" />
-            <marker date="1495630457839" expanded="true" signature="6118:6133" ph="SELECT missi... missing_value" />
-            <marker date="1495630457839" expanded="true" signature="6118:6135" ph="SELECT %s FR... " />
+            <marker date="1496797868012" expanded="true" signature="6368:6383" ph="SELECT %s FR... " />
+            <marker date="1496797868012" expanded="true" signature="6368:6385" ph="SELECT %s FR... " />
+            <marker date="1496797868012" expanded="true" signature="6368:6386" ph="SELECT %s FR... " />
+            <marker date="1496797868012" expanded="true" signature="6432:6449" ph="SELECT %s FR... " />
           </folding>
         </state>
       </provider>
@@ -743,7 +716,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="1" lean-forward="false" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -751,7 +723,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="47" lean-forward="true" selection-start-line="1" selection-start-column="47" selection-end-line="1" selection-end-column="47" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -771,9 +742,10 @@
           <caret line="160" column="69" lean-forward="true" selection-start-line="160" selection-start-column="69" selection-end-line="160" selection-end-column="69" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
-            <marker date="1495630457839" expanded="true" signature="3031:3068" ph="SELECT sourc... control" />
-            <marker date="1495630457839" expanded="true" signature="6118:6133" ph="SELECT missi... missing_value" />
-            <marker date="1495630457839" expanded="true" signature="6118:6135" ph="SELECT %s FR... " />
+            <marker date="1496797868012" expanded="true" signature="6368:6383" ph="SELECT %s FR... " />
+            <marker date="1496797868012" expanded="true" signature="6368:6385" ph="SELECT %s FR... " />
+            <marker date="1496797868012" expanded="true" signature="6368:6386" ph="SELECT %s FR... " />
+            <marker date="1496797868012" expanded="true" signature="6432:6449" ph="SELECT %s FR... " />
           </folding>
         </state>
       </provider>
@@ -794,9 +766,10 @@
           <caret line="74" column="13" lean-forward="false" selection-start-line="74" selection-start-column="13" selection-end-line="74" selection-end-column="13" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
-            <marker date="1495630457839" expanded="true" signature="3031:3068" ph="SELECT sourc... control" />
-            <marker date="1495630457839" expanded="true" signature="6118:6133" ph="SELECT missi... missing_value" />
-            <marker date="1495630457839" expanded="true" signature="6118:6135" ph="SELECT %s FR... " />
+            <marker date="1496797868012" expanded="true" signature="6368:6383" ph="SELECT %s FR... " />
+            <marker date="1496797868012" expanded="true" signature="6368:6385" ph="SELECT %s FR... " />
+            <marker date="1496797868012" expanded="true" signature="6368:6386" ph="SELECT %s FR... " />
+            <marker date="1496797868012" expanded="true" signature="6432:6449" ph="SELECT %s FR... " />
           </folding>
         </state>
       </provider>
@@ -805,7 +778,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="50">
           <caret line="2" column="1" lean-forward="false" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -823,7 +795,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="50">
           <caret line="2" column="1" lean-forward="false" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -833,9 +804,10 @@
           <caret line="75" column="12" lean-forward="false" selection-start-line="75" selection-start-column="12" selection-end-line="75" selection-end-column="12" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
-            <marker date="1495630457839" expanded="true" signature="3031:3068" ph="SELECT sourc... control" />
-            <marker date="1495630457839" expanded="true" signature="6118:6133" ph="SELECT missi... missing_value" />
-            <marker date="1495630457839" expanded="true" signature="6118:6135" ph="SELECT %s FR... " />
+            <marker date="1496797868012" expanded="true" signature="6368:6383" ph="SELECT %s FR... " />
+            <marker date="1496797868012" expanded="true" signature="6368:6385" ph="SELECT %s FR... " />
+            <marker date="1496797868012" expanded="true" signature="6368:6386" ph="SELECT %s FR... " />
+            <marker date="1496797868012" expanded="true" signature="6432:6449" ph="SELECT %s FR... " />
           </folding>
         </state>
       </provider>
@@ -863,9 +835,10 @@
           <caret line="73" column="0" lean-forward="true" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
-            <marker date="1495630457839" expanded="true" signature="3031:3068" ph="SELECT sourc... control" />
-            <marker date="1495630457839" expanded="true" signature="6118:6133" ph="SELECT missi... missing_value" />
-            <marker date="1495630457839" expanded="true" signature="6118:6135" ph="SELECT %s FR... " />
+            <marker date="1496797868012" expanded="true" signature="6368:6383" ph="SELECT %s FR... " />
+            <marker date="1496797868012" expanded="true" signature="6368:6385" ph="SELECT %s FR... " />
+            <marker date="1496797868012" expanded="true" signature="6368:6386" ph="SELECT %s FR... " />
+            <marker date="1496797868012" expanded="true" signature="6432:6449" ph="SELECT %s FR... " />
           </folding>
         </state>
       </provider>
@@ -881,7 +854,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="50">
           <caret line="2" column="1" lean-forward="false" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -906,7 +878,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="50">
           <caret line="2" column="1" lean-forward="false" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -916,9 +887,10 @@
           <caret line="72" column="12" lean-forward="false" selection-start-line="72" selection-start-column="12" selection-end-line="72" selection-end-column="12" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
-            <marker date="1495630457839" expanded="true" signature="3031:3068" ph="SELECT sourc... control" />
-            <marker date="1495630457839" expanded="true" signature="6118:6133" ph="SELECT missi... missing_value" />
-            <marker date="1495630457839" expanded="true" signature="6118:6135" ph="SELECT %s FR... " />
+            <marker date="1496797868012" expanded="true" signature="6368:6383" ph="SELECT %s FR... " />
+            <marker date="1496797868012" expanded="true" signature="6368:6385" ph="SELECT %s FR... " />
+            <marker date="1496797868012" expanded="true" signature="6368:6386" ph="SELECT %s FR... " />
+            <marker date="1496797868012" expanded="true" signature="6432:6449" ph="SELECT %s FR... " />
           </folding>
         </state>
       </provider>
@@ -939,9 +911,10 @@
           <caret line="55" column="12" lean-forward="true" selection-start-line="55" selection-start-column="12" selection-end-line="55" selection-end-column="12" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
-            <marker date="1495630457839" expanded="true" signature="3031:3068" ph="SELECT sourc... control" />
-            <marker date="1495630457839" expanded="true" signature="6118:6133" ph="SELECT missi... missing_value" />
-            <marker date="1495630457839" expanded="true" signature="6118:6135" ph="SELECT %s FR... " />
+            <marker date="1496797868012" expanded="true" signature="6368:6383" ph="SELECT %s FR... " />
+            <marker date="1496797868012" expanded="true" signature="6368:6385" ph="SELECT %s FR... " />
+            <marker date="1496797868012" expanded="true" signature="6368:6386" ph="SELECT %s FR... " />
+            <marker date="1496797868012" expanded="true" signature="6432:6449" ph="SELECT %s FR... " />
           </folding>
         </state>
       </provider>
@@ -957,7 +930,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="50">
           <caret line="2" column="1" lean-forward="false" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -977,9 +949,10 @@
           <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
-            <marker date="1495630457839" expanded="true" signature="3031:3068" ph="SELECT sourc... control" />
-            <marker date="1495630457839" expanded="true" signature="6118:6133" ph="SELECT missi... missing_value" />
-            <marker date="1495630457839" expanded="true" signature="6118:6135" ph="SELECT %s FR... " />
+            <marker date="1496797868012" expanded="true" signature="6368:6383" ph="SELECT %s FR... " />
+            <marker date="1496797868012" expanded="true" signature="6368:6385" ph="SELECT %s FR... " />
+            <marker date="1496797868012" expanded="true" signature="6368:6386" ph="SELECT %s FR... " />
+            <marker date="1496797868012" expanded="true" signature="6432:6449" ph="SELECT %s FR... " />
           </folding>
         </state>
       </provider>
@@ -988,7 +961,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="50">
           <caret line="2" column="1" lean-forward="true" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1006,10 +978,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/connections.json">
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/aedc7136-4506-41be-a6b2-e4f9911f5b36/console.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="23" lean-forward="false" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+        <state relative-caret-position="0">
+          <caret line="0" column="37" lean-forward="false" selection-start-line="0" selection-start-column="37" selection-end-line="0" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -1017,14 +989,43 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="50">
           <caret line="2" column="1" lean-forward="false" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/79c5cae2-0e16-4ed4-af5b-d59529fe3ab9/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="73" lean-forward="false" selection-start-line="0" selection-start-column="73" selection-end-line="0" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/connections.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" column="5" lean-forward="false" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/afd6a63a-07d2-4347-b530-a6112ed2fa8d/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/17ef1cb4-bb20-406d-b870-afd16e480d44/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Metadata.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="111" column="105" lean-forward="false" selection-start-line="111" selection-start-column="93" selection-end-line="111" selection-end-column="105" />
+        <state relative-caret-position="1479">
+          <caret line="92" column="10" lean-forward="false" selection-start-line="92" selection-start-column="10" selection-end-line="92" selection-end-column="10" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
@@ -1033,45 +1034,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ETLTools.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1567">
-          <caret line="100" column="38" lean-forward="false" selection-start-line="100" selection-start-column="38" selection-end-line="100" selection-end-column="38" />
+        <state relative-caret-position="136">
+          <caret line="155" column="11" lean-forward="true" selection-start-line="155" selection-start-column="11" selection-end-line="155" selection-end-column="11" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
-            <marker date="1495630457839" expanded="true" signature="3031:3068" ph="SELECT sourc... control" />
-            <marker date="1495630457839" expanded="true" signature="6118:6133" ph="SELECT missi... missing_value" />
-            <marker date="1495630457839" expanded="true" signature="6118:6135" ph="SELECT %s FR... " />
+            <marker date="1496797868012" expanded="true" signature="6368:6383" ph="SELECT %s FR... " />
+            <marker date="1496797868012" expanded="true" signature="6368:6385" ph="SELECT %s FR... " />
+            <marker date="1496797868012" expanded="true" signature="6368:6386" ph="SELECT %s FR... " />
+            <marker date="1496797868012" expanded="true" signature="6432:6449" ph="SELECT %s FR... " />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/aedc7136-4506-41be-a6b2-e4f9911f5b36/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="37" lean-forward="false" selection-start-line="0" selection-start-column="37" selection-end-line="0" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/79c5cae2-0e16-4ed4-af5b-d59529fe3ab9/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="109" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Listings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="142" column="0" lean-forward="true" selection-start-line="142" selection-start-column="0" selection-end-line="142" selection-end-column="0" />
+        <state relative-caret-position="614">
+          <caret line="151" column="98" lean-forward="false" selection-start-line="151" selection-start-column="98" selection-end-line="151" selection-end-column="98" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
-            <marker date="1495630787396" expanded="true" signature="1855:1932" ph="SELECT sourc... control" />
-            <marker date="1495630787396" expanded="true" signature="4482:7772" ph="SELECT sourc... control" />
-            <marker date="1495630787396" expanded="true" signature="4611:4626" ph="SELECT missi... agen" />
-            <marker date="1495630787396" expanded="true" signature="4611:4659" ph="SELECT missi... tm_rental_listings_hourly" />
-            <marker date="1495630787396" expanded="true" signature="5620:5660" ph="SELECT &quot;List... tm_rental_listings_hourly" />
-            <marker date="1495630787396" expanded="true" signature="7536:7622" ph="UPDATE renta... " />
+            <marker date="1496884699922" expanded="true" signature="1863:1948" ph="SELECT sourc... control" />
+            <marker date="1496884699922" expanded="true" signature="1863:1952" ph="SELECT sourc... control" />
+            <marker date="1496884699922" expanded="true" signature="5211:5226" ph="SELECT missi... tm_rental_listings_hourly" />
+            <marker date="1496884699922" expanded="true" signature="5211:5251" ph="SELECT missi... agency" />
+            <marker date="1496884699922" expanded="true" signature="6578:6618" ph="SELECT missi... tm_rental_listings_hourly" />
+            <marker date="1496884699922" expanded="true" signature="7354:7390" ph="select count... rental_listings" />
+            <marker date="1496884699922" expanded="true" signature="7999:8084" ph="UPDATE renta... " />
+            <marker date="1496884699922" expanded="true" signature="8236:8272" ph="select count... rental_listings" />
+            <marker date="1496884699922" expanded="true" signature="9416:9625" ph="UPDATE renta... " />
+            <marker date="1496884699922" expanded="true" signature="10831:10871" ph="SELECT missi... tm_rental_listings_hourly" />
+            <marker date="1496884699922" expanded="true" signature="12176:12216" ph="SELECT missi... tm_rental_listings_hourly" />
           </folding>
         </state>
       </provider>
