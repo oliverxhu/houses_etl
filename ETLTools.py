@@ -6,6 +6,7 @@ import psycopg2
 import pygrametl
 import json
 
+
 class ETLTools:
 
     def flatten_json(self, y):
@@ -59,7 +60,8 @@ class ETLTools:
     def from_ms_timestamp(self, ts):
         if len(str(ts)) < 2:
             return None
-        return datetime.datetime.fromtimestamp(ts/1000)
+        return datetime.datetime.fromtimestamp(int(str(ts)[:-3]))
+
 
 class DatabaseConnection:
 
@@ -87,19 +89,27 @@ class DatabaseConnection:
         return psycopg2.connect("""host='%s' dbname='%s' user='%s' password='%s'""" %
                                 (self._host, self._db, self._user, self._passwd))
 
-    def create_trans_instance(self):
-        return Transaction(self, self._engine)
+    def create_transaction(self):
+        self._connection_test()
+        self.transaction = self.con.begin()
+
+    def commit_transaction(self):
+        self.transaction.commit()
+
+    def rollback_transaction(self):
+        self.transaction.rollback()
+
+    def close_connection(self):
+        self.con.close()
 
     def _connection_test(self):
         try:
             self.con.execute("SELECT 1")
         except exc.DBAPIError as e:
-            print("connection test failed")
             if e.connection_invalidated:
                 print("Connection invalidated")
             self.con = self._engine.connect()
             self.con.execute("set search_path to %s" % self._schema)
-            print("Reconnected")
 
     def query(self, query):
         """
@@ -152,7 +162,7 @@ class DatabaseConnection:
         pgetlconn.close()
 
     def table_lookup(self, df, df_lookup_column_list, table, table_lookup_column_list, table_return_column_list=[],
-                     right_suffix='_lookup', indicator=True, how='left', wheresql=None):
+                     right_suffix='_lookup', indicator=True, how='left', wheresql=None, convert_datetime_cols=None):
         """
         Looks up values from a database table
         :param df: pandas DataFrame input table
@@ -164,26 +174,43 @@ class DatabaseConnection:
         :param right_suffix: suffix to add to lookup and returned columns
         :param indicator: add indicator column _merge. If this is a string, the string is the name of the column
         :param how: how to do the join
+        :param wheresql: add a where and following SQL clauses
+        :param  convert_datetime_cols: a list of datetime cols in the dataframe to convert to datetime64[ns]
         :return: original input pandas DataFrame with lookup columns and return columns appended
         """
         self._connection_test()
+
         if wheresql:
             sql = "SELECT %s FROM %s " + wheresql
         else:
             sql = "SELECT %s FROM %s"
+
+        # THIS IS THE PART THAT DOESN'T WORK PROPERLY AND RETURNS AN EMPTY DATAFRAME
         df_lookup = pd.read_sql(sql % (
             ', '.join(table_lookup_column_list+table_return_column_list), table), con=self.con)
+
+        print('df_lookup: %s' % df_lookup.head())
+
+        if convert_datetime_cols:
+            for col in convert_datetime_cols:
+                if col in table_lookup_column_list + table_return_column_list:
+                    print('col: %s' % col)
+                    print('type: %s' % df_lookup[col].dtype)
+                    print('col: %s' % df_lookup[col])
+                    df_lookup[col] = df_lookup[col].astype('datetime64[ns, UTC]')
 
         return pd.merge(left=df, right=df_lookup, how=how, left_on=df_lookup_column_list,
                         right_on=table_lookup_column_list, suffixes=('', right_suffix), indicator=indicator)
 
-    def add_new_records(self, df, df_lookup_column_list, table, table_lookup_column_list):
+    def add_new_records(self, df, df_lookup_column_list, table, table_lookup_column_list,
+                        convert_datetime_cols=None):
         """
         Add NEW and CHANGED records to database table
         :param df: DataFrame to write records from
         :param df_lookup_column_list: pandas DataFrame columns to look up
         :param table: table to write records to
         :param table_lookup_column_list: database table columns that corresponds to df_lookup_column_list
+        :param  convert_datetime_cols: a list of datetime cols in the dataframe to convert to datetime64[ns, UTC]
         :return: None
         """
         self._connection_test()
@@ -192,12 +219,14 @@ class DatabaseConnection:
                                          table=table,
                                          table_lookup_column_list=table_lookup_column_list,
                                          table_return_column_list=[],
-                                         right_suffix='_tbl', indicator='record_exists')
-        new_records = merged_table[merged_table['record_exists'] == 'left_only']
-        new_records = new_records.drop('record_exists', axis=1)
+                                         right_suffix='_tbl', indicator=True,
+                                         convert_datetime_cols=convert_datetime_cols)
+        new_records = merged_table[merged_table['_merge'] == 'left_only']
+        new_records = new_records.drop('_merge', axis=1)
         self.append_df_to_table(df=new_records, table=table)
 
-    def find_old_records(self, df, df_lookup_column_list, table, table_lookup_column_list, table_pk):
+    def find_old_records(self, df, df_lookup_column_list, table, table_lookup_column_list, table_pk,
+                         convert_datetime_cols=None):
         """
         Add NEW and CHANGED records to database table
         :param df: DataFrame to write records from
@@ -205,18 +234,23 @@ class DatabaseConnection:
         :param table: table to write records to
         :param table_lookup_column_list: database table columns that corresponds to df_lookup_column_list
         :param table_pk: primary key of table
+        :param  convert_datetime_cols: a list of datetime cols in the dataframe to convert to datetime64[ns]
         :return: None
         """
         self._connection_test()
+        print('table lookup...')
         merged_table = self.table_lookup(df=df,
                                          df_lookup_column_list=df_lookup_column_list,
                                          table=table,
                                          table_lookup_column_list=table_lookup_column_list,
                                          table_return_column_list=[table_pk],
-                                         right_suffix='_tbl', indicator='record_exists', how='right')
+                                         right_suffix='_tbl', indicator='record_exists', how='right',
+                                         convert_datetime_cols=convert_datetime_cols)
+
         old_records = merged_table[merged_table['record_exists'] == 'right_only']
         old_records = old_records.drop('record_exists', axis=1)[[table_pk]]
         return old_records
+
 
 class Transaction:
 
