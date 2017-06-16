@@ -4,6 +4,7 @@ from sqlalchemy import Table, MetaData
 import datetime
 import psycopg2
 import pygrametl
+import numpy as np
 import json
 
 
@@ -57,11 +58,6 @@ class ETLTools:
     def dateend(self):
         return datetime.date(2099, 12, 31)
 
-    def from_ms_timestamp(self, ts):
-        if len(str(ts)) < 2:
-            return None
-        return datetime.datetime.fromtimestamp(int(str(ts)[:-3]))
-
 
 class DatabaseConnection:
 
@@ -82,6 +78,7 @@ class DatabaseConnection:
         self._engine = create_engine('postgresql+psycopg2://%s:%s@%s:5432/%s' % (
             user, passwd, host, db))
         self.con = self._engine.connect()  # global connection
+        print('creating connection to database %s with schema %s' % (db, schema))
         self.con.execute("set search_path to %s" % schema)
 
     def _connect_pygrametl(self):
@@ -161,6 +158,9 @@ class DatabaseConnection:
         pgetlconn.commit()
         pgetlconn.close()
 
+    def generator_to_df(self, generator, columns=None):
+        return pd.DataFrame([[val for val in row] for row in generator], columns=columns)
+
     def table_lookup(self, df, df_lookup_column_list, table, table_lookup_column_list, table_return_column_list=[],
                      right_suffix='_lookup', indicator=True, how='left', wheresql=None, convert_datetime_cols=None):
         """
@@ -178,6 +178,7 @@ class DatabaseConnection:
         :param  convert_datetime_cols: a list of datetime cols in the dataframe to convert to datetime64[ns]
         :return: original input pandas DataFrame with lookup columns and return columns appended
         """
+
         self._connection_test()
 
         if wheresql:
@@ -185,19 +186,15 @@ class DatabaseConnection:
         else:
             sql = "SELECT %s FROM %s"
 
-        # THIS IS THE PART THAT DOESN'T WORK PROPERLY AND RETURNS AN EMPTY DATAFRAME
         df_lookup = pd.read_sql(sql % (
             ', '.join(table_lookup_column_list+table_return_column_list), table), con=self.con)
 
-        print('df_lookup: %s' % df_lookup.head())
-
-        if convert_datetime_cols:
-            for col in convert_datetime_cols:
-                if col in table_lookup_column_list + table_return_column_list:
-                    print('col: %s' % col)
-                    print('type: %s' % df_lookup[col].dtype)
-                    print('col: %s' % df_lookup[col])
-                    df_lookup[col] = df_lookup[col].astype('datetime64[ns, UTC]')
+        # if wheresql:
+        #     for col in table_lookup_column_list:
+        #         dft = pd.merge(left=df, right=df_lookup, how='left', on=col, suffixes=('', '_right'), indicator=True)
+        #         if len(dft[dft['_merge'] == 'left_only']) > 0:
+        #             print("These columns didn't join for updates: %s" % col)
+        #             #print('df: %s' % df[col], 'table: %s' % df_lookup[col])
 
         return pd.merge(left=df, right=df_lookup, how=how, left_on=df_lookup_column_list,
                         right_on=table_lookup_column_list, suffixes=('', right_suffix), indicator=indicator)
@@ -213,6 +210,8 @@ class DatabaseConnection:
         :param  convert_datetime_cols: a list of datetime cols in the dataframe to convert to datetime64[ns, UTC]
         :return: None
         """
+        print("***add_new_records***")
+
         self._connection_test()
         merged_table = self.table_lookup(df=df,
                                          df_lookup_column_list=df_lookup_column_list,
@@ -224,6 +223,7 @@ class DatabaseConnection:
         new_records = merged_table[merged_table['_merge'] == 'left_only']
         new_records = new_records.drop('_merge', axis=1)
         self.append_df_to_table(df=new_records, table=table)
+        print('new records: %s' % (len(new_records)))
 
     def find_old_records(self, df, df_lookup_column_list, table, table_lookup_column_list, table_pk,
                          convert_datetime_cols=None):
@@ -237,8 +237,8 @@ class DatabaseConnection:
         :param  convert_datetime_cols: a list of datetime cols in the dataframe to convert to datetime64[ns]
         :return: None
         """
+        print("***find_old_records***")
         self._connection_test()
-        print('table lookup...')
         merged_table = self.table_lookup(df=df,
                                          df_lookup_column_list=df_lookup_column_list,
                                          table=table,
