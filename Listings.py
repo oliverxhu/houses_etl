@@ -60,7 +60,7 @@ class Listings(ETLTools.ETLTools):
             if (self.agency_flag + self.rental_listings_flag + self.agent_rental_flag + self.rental_photo_flag) == 4:
                 self.con_data.commit_transaction()
                 self.con_data.close_connection()
-                exit()`
+                exit()
             else:
                 self.con_data.rollback_transaction()
                 tries += 1
